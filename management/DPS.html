@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ডিপিএস ম্যানেজমেন্ট</title>
+  <title>জে.এস.পি.এস. ম্যানেজমেন্ট</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body { background-color: #f8f9fa; }
@@ -33,7 +33,7 @@
           <li class="nav-item"><a class="nav-link" href="addPayment.html">অর্থ প্রদান</a></li>
           <li class="nav-item"><a class="nav-link" href="addExternalIncome.html">বাহ্যিক আয়</a></li>
           <li class="nav-item"><a class="nav-link" href="addExternalExpenses.html">বাহ্যিক ব্যয়</a></li>
-          <li class="nav-item active"><a class="nav-link active" href="DPS.html">ডিপিএস</a></li>
+          <li class="nav-item active"><a class="nav-link active" href="DPS.html">জে.এস.পি.এস.</a></li>
           <li class="nav-item"><a class="nav-link" href="FixedDeposit.html">স্থায়ী আমানত</a></li>
         </ul>
       </div>
@@ -41,7 +41,7 @@
   </nav>
 
   <div class="container">
-    <h2 class="text-center my-4">ডিপিএস</h2>
+    <h2 class="text-center my-4">জে.এস.পি.এস.</h2>
     <ul class="nav nav-tabs mb-4">
       <li class="nav-item">
         <a class="nav-link active" data-form="accountOpen">হিসাব খোলা</a>
@@ -58,7 +58,7 @@
     <div id="accountOpen" class="form-section active">
       <form id="dpsAccountOpenForm">
         <div class="mb-3">
-          <label for="dpsAccountNumber" class="form-label">ডিপিএস হিসাব নং :</label>
+          <label for="dpsAccountNumber" class="form-label">জে.এস.পি.এস. হিসাব নং :</label>
           <input type="text" name="dpsAccountNumber" id="dpsAccountNumber" class="form-control" required>
         </div>
         <div class="mb-3">
@@ -135,7 +135,7 @@
     <div id="collection" class="form-section">
       <form id="dpsCollectionForm" novalidate>
         <div class="mb-3">
-          <label for="dpsAccountNumberCollection" class="form-label">ডিপিএস হিসাব নং :</label>
+          <label for="dpsAccountNumberCollection" class="form-label">জে.এস.পি.এস. হিসাব নং :</label>
           <input type="text" name="dpsAccountNumber" id="dpsAccountNumberCollection" class="form-control" list="dpsAccountSuggestions" required>
           <datalist id="dpsAccountSuggestions"></datalist>
         </div>
@@ -159,8 +159,8 @@
         <div id="transactionDetailsCollection">
           <div class="transaction-detail">
             <select name="type" class="form-select" required>
-              <option value="ডিপিএস জমা">ডিপিএস জমা</option>
-              <option value="ডিপিএস জরিমানা">ডিপিএস জরিমানা</option>
+              <option value="জে.এস.পি.এস. জমা">জে.এস.পি.এস. জমা</option>
+              <option value="জে.এস.পি.এস. জরিমানা">জে.এস.পি.এস. জরিমানা</option>
             </select>
             <input type="number" name="amount" class="form-control" placeholder="পরিমাণ" required>
             <button type="button" class="btn btn-danger btn-sm" onclick="$(this).parent().remove()">✖</button>
@@ -175,7 +175,7 @@
     <div id="payment" class="form-section">
       <form id="dpsPaymentForm" novalidate>
         <div class="mb-3">
-          <label for="dpsAccountNumberPayment" class="form-label">ডিপিএস হিসাব নং :</label>
+          <label for="dpsAccountNumberPayment" class="form-label">জে.এস.পি.এস. হিসাব নং :</label>
           <input type="text" name="dpsAccountNumber" id="dpsAccountNumberPayment" class="form-control" list="dpsAccountSuggestions" required>
         </div>
         <div class="mb-3">
@@ -198,8 +198,8 @@
         <div id="transactionDetailsPayment">
           <div class="transaction-detail">
             <select name="type" class="form-select" required>
-              <option value="ডিপিএস উত্তোলন">ডিপিএস উত্তোলন</option>
-              <option value="ডিপিএস লাভ বিতরণ">ডিপিএস লাভ বিতরণ</option>
+              <option value="জে.এস.পি.এস. উত্তোলন">জে.এস.পি.এস. উত্তোলন</option>
+              <option value="জে.এস.পি.এস. লাভ বিতরণ">জে.এস.পি.এস. লাভ বিতরণ</option>
             </select>
             <input type="number" name="amount" class="form-control" placeholder="পরিমাণ" required>
             <button type="button" class="btn btn-danger btn-sm" onclick="$(this).parent().remove()">✖</button>
@@ -357,8 +357,8 @@
     function addTransactionDetail(containerId) {
       const container = $(`#${containerId}`);
       const options = containerId.includes('Collection') ?
-        `<option value="ডিপিএস জমা">ডিপিএস জমা</option><option value="ডিপিএস জরিমানা">ডিপিএস জরিমানা</option>` :
-        `<option value="ডিপিএস উত্তোলন">ডিপিএস উত্তোলন</option><option value="ডিপিএস লাভ বিতরণ">ডিপিএস লাভ বিতরণ</option>`;
+        `<option value="জে.এস.পি.এস. জমা">জে.এস.পি.এস. জমা</option><option value="জে.এস.পি.এস. জরিমানা">জে.এস.পি.এস. জরিমানা</option>` :
+        `<option value="জে.এস.পি.এস. উত্তোলন">জে.এস.পি.এস. উত্তোলন</option><option value="জে.এস.পি.এস. লাভ বিতরণ">জে.এস.পি.এস. লাভ বিতরণ</option>`;
       container.append(`
         <div class="transaction-detail">
           <select name="type" class="form-select" required>
@@ -419,8 +419,8 @@
               <div class="transaction-detail">
                 <select name="type" class="form-select" required>
                   ${activeForm === 'collection' ? 
-                    '<option value="ডিপিএস জমা">ডিপিএস জমা</option><option value="ডিপিএস জরিমানা">ডিপিএস জরিমানা</option>' :
-                    '<option value="ডিপিএস উত্তোলন">ডিপিএস উত্তোলন</option><option value="ডিপি঎স লাভ বিতরণ">ডিপিএস লাভ বিতরণ</option>'}
+                    '<option value="জে.এস.পি.এস. জমা">জে.এস.পি.এস. জমা</option><option value="জে.এস.পি.এস. জরিমানা">জে.এস.পি.এস. জরিমানা</option>' :
+                    '<option value="জে.এস.পি.এস. উত্তোলন">জে.এস.পি.এস. উত্তোলন</option><option value="ডিপি঎স লাভ বিতরণ">জে.এস.পি.এস. লাভ বিতরণ</option>'}
                 </select>
                 <input type="number" name="amount" class="form-control" placeholder="পরিমাণ" required>
                 <button type="button" class="btn btn-danger btn-sm" onclick="$(this).parent().remove()">✖</button>
